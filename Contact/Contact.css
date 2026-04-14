@@ -1,0 +1,245 @@
+/* ── ACTIVE NAV ── */
+.nav-links a.active {
+  color: var(--gold);
+}
+.nav-links a.active::after {
+  width: 100%;
+}
+
+/* ── PAGE HERO ── */
+.page-hero {
+  min-height: 40vh;
+  background:
+    linear-gradient(to bottom, rgba(0,0,0,0.78) 0%, rgba(0,0,0,0.62) 100%),
+    url('https://images.unsplash.com/photo-1464983953574-0892a716854b?w=1600&q=80&auto=format&fit=crop')
+    center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 100px 5% 60px;
+}
+
+.page-hero h1 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  color: var(--white);
+  line-height: 1.15;
+  margin-bottom: 1.2rem;
+}
+
+.page-hero h1 em {
+  font-style: italic;
+  color: var(--gold-light);
+}
+
+.page-hero p {
+  max-width: 500px;
+  font-size: 1rem;
+  color: rgba(255,255,255,0.75);
+  font-weight: 300;
+}
+
+/* ── CONTACT GRID ── */
+.contact-page-section {
+  background: var(--darker);
+  padding: 90px 5%;
+}
+
+.contact-page-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 4rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ── INFO KOLOM ── */
+.contact-info-col {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.contact-info-block,
+.contact-hours-block {
+  background: var(--card-bg);
+  border: 1px solid rgba(201, 168, 76, 0.15);
+  padding: 2rem;
+}
+
+.contact-detail {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+  color: var(--text);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.contact-detail:last-child {
+  margin-bottom: 0;
+}
+
+.contact-icon svg {
+  width: 20px;
+  height: 20px;
+  stroke: var(--gold);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* ── OPENINGSUREN ── */
+.hours-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.hours-table tr {
+  border-bottom: 1px solid rgba(201, 168, 76, 0.08);
+}
+
+.hours-table td {
+  padding: 0.6rem 0;
+  color: var(--text);
+}
+
+.hours-table td:last-child {
+  text-align: right;
+  color: var(--gold);
+  font-weight: 600;
+}
+
+.hours-table .closed-row td {
+  color: var(--muted);
+}
+
+.hours-table .closed-row td:last-child {
+  color: var(--muted);
+}
+
+.hours-note {
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  color: var(--muted);
+  font-style: italic;
+  line-height: 1.6;
+}
+
+/* ── SLUITINGSDAGEN ── */
+.closing-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.closing-list li {
+  font-size: 0.88rem;
+  color: var(--text);
+  padding: 0.3rem 0;
+  border-bottom: 1px solid rgba(201, 168, 76, 0.06);
+}
+
+.closing-list li::before {
+  content: '—';
+  color: var(--gold);
+  margin-right: 0.6rem;
+}
+
+/* ── FORMULIER KOLOM ── */
+.contact-form-col {
+  background: var(--card-bg);
+  border: 1px solid rgba(201, 168, 76, 0.15);
+  padding: 2.5rem 2rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-size: 0.78rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(201, 168, 76, 0.25);
+  color: var(--text);
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.3s;
+  box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  border-color: var(--gold);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: var(--muted);
+}
+
+.form-group select {
+  appearance: none;
+  cursor: pointer;
+}
+
+.form-group select option {
+  background: #1a1a1a;
+  color: var(--text);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+.btn-submit {
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+/* ── KAART ── */
+.map-section {
+  background: var(--dark);
+  border-top: 1px solid rgba(201, 168, 76, 0.12);
+}
+
+.map-section iframe {
+  display: block;
+  filter: grayscale(40%) brightness(0.85);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .contact-page-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
