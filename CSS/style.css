@@ -395,10 +395,16 @@ footer {
   text-decoration: none;
 }
 
-.footer-copy {
-  font-size: 0.78rem;
+.footer-copy{
+  font-size: 0.70rem;
   color: var(--muted);
   letter-spacing: 1px;
+}
+
+.footer-copyright{
+  font-size: 0.70rem;
+  color: var(--muted);
+  text-decoration: none;
 }
 
 /* ── RESPONSIVE ── */
