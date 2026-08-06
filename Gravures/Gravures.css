@@ -11,7 +11,7 @@
   min-height: 50vh;
   background:
     linear-gradient(to bottom, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.6) 100%),
-    url('../images/Machinewood.webp?w=1200&q=80&auto=format&fit=crop')
+    url('../images/GravureTrouw.jpeg?w=1200&q=80&auto=format&fit=crop')
     center/cover no-repeat;
   display: flex;
   flex-direction: column;
@@ -56,7 +56,7 @@
 
 .intro-banner-img {
   background:
-    url('../images/horloge.jpg?w=1200&q=80&auto=format&fit=crop')
+    url('../images/Winkel_Schort.jpg?w=1200&q=80&auto=format&fit=crop')
     center/cover no-repeat;
   min-height: 380px;
 }
@@ -281,13 +281,17 @@
   width: 320px;
   height: 400px;
   flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--card-bg); /* of #111 */
   overflow: hidden;
 }
 
 .gallery-tile img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   display: block;
   transition: transform 0.5s ease, filter 0.5s ease;
   filter: brightness(0.85) saturate(0.85);
