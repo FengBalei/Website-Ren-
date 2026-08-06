@@ -76,7 +76,7 @@
   text-align: center;
 }
 
-.repair-grid {
+.grav-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
@@ -84,7 +84,7 @@
   text-align: left;
 }
 
-.repair-card {
+.grav-card {
   background: var(--card-bg);
   border: 1px solid rgba(201, 168, 76, 0.15);
   padding: 2.5rem 2rem;
@@ -96,7 +96,7 @@
   overflow: hidden;
 }
 
-.repair-card::before {
+.grav-card::before {
   content: '';
   position: absolute;
   bottom: 0; left: 0;
@@ -105,41 +105,41 @@
   transition: width 0.4s;
 }
 
-.repair-card:hover {
+.grav-card:hover {
   border-color: rgba(201, 168, 76, 0.45);
   transform: translateY(-5px);
   box-shadow: 0 20px 40px rgba(0,0,0,0.4);
 }
 
-.repair-card:hover::before { width: 100%; }
+.grav-card:hover::before { width: 100%; }
 
-.repair-card-icon svg {
+.grav-card-icon svg {
   width: 52px;
   height: 52px;
   stroke: var(--gold);
 }
 
-.repair-card-title {
+.grav-card-title {
   font-family: 'Josefin Sans', sans-serif;
   font-size: 1.35rem;
   color: var(--white);
 }
 
-.repair-card-desc {
+.grav-card-desc {
   font-size: 0.9rem;
   color: var(--muted);
   font-weight: 300;
   line-height: 1.75;
 }
 
-.repair-list {
+.grav-list {
   list-style: none;
   display: flex;
   flex-direction: column;
   gap: 0.65rem;
 }
 
-.repair-list li {
+.grav-list li {
   display: flex;
   align-items: center;
   gap: 0.7rem;
@@ -147,7 +147,7 @@
   color: var(--text);
 }
 
-.repair-list li svg {
+.grav-list li svg {
   width: 16px;
   height: 16px;
   stroke: var(--gold);
@@ -222,7 +222,7 @@
 @media (max-width: 768px) {
   .intro-banner { grid-template-columns: 1fr; }
   .intro-banner-img { min-height: 260px; }
-  .repair-grid { grid-template-columns: 1fr; }
+  .grav-grid { grid-template-columns: 1fr; }
   .seriewerk-inner { flex-direction: column; gap: 1.5rem; }
 }
 
