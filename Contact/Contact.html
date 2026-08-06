@@ -8,6 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;300;400;600;700&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="../CSS/style.css" />
     <link rel="stylesheet" href="Contact.css" />
+    <script src="Contact.js"></script>
 </head>
 
 <body>
@@ -135,10 +136,11 @@
 
             <!-- Rechterkolom: formulier -->
             <div class="contact-form-col">
+                 <script src="Contact.js"></script>
                 <p class="section-label">Stuur ons een bericht</p>
                 <h2 class="section-title" style="font-size:1.8rem; margin-bottom:2rem;">Contactformulier</h2>
 
-                <form class="contact-form" action="#" method="POST">
+                <form class="contact-form" id="contactForm"  action="send-mail.php" method="POST">
 
                     <div class="form-group">
                         <label for="naam">Naam</label>
