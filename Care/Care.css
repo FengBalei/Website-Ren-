@@ -1,0 +1,308 @@
+/* ── ACTIVE NAV LINK ── */
+.nav-links a.active {
+  color: var(--gold);
+}
+.nav-links a.active::after {
+  width: 100%;
+}
+
+/* ── PAGE HERO ── */
+.page-hero {
+  min-height: 50vh;
+  background: var(--darker);
+  /* background:
+    linear-gradient(to bottom, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.6) 100%),
+    url('../images/Onderh_blink.jpg')
+    center/cover no-repeat;  */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 100px 5% 60px;
+}
+
+.page-hero h1 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  color: var(--white);
+  line-height: 1.15;
+  margin-bottom: 1.2rem;
+}
+
+.page-hero h1 em {
+  font-style: italic;
+  color: var(--gold-light);
+}
+
+.page-hero p {
+  max-width: 580px;
+  font-size: 1rem;
+  color: rgba(255,255,255,0.75);
+  font-weight: 300;
+}
+
+/* ── INTRO BANNER ── */
+.intro-banner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 480px;
+  background: var(--darker);
+  padding: 0;
+}
+
+.intro-banner a{
+  margin-top: 15px;
+  padding-top: 10px;
+}
+
+.intro-banner-img {
+  background:
+url('../images/Onderh_blink.JPG')
+    center/cover no-repeat;
+  min-height: 380px;
+}
+
+.intro-banner-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 4rem 5%;
+  background: var(--darker);
+}
+
+/* ── DIENSTEN DETAIL ── */
+.diensten-detail {
+  background: var(--darker);
+}
+
+.repair-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.repair-card {
+  background: var(--card-bg);
+  border: 1px solid rgba(201, 168, 76, 0.15);
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.repair-card::before {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 0; height: 3px;
+  background: var(--gold);
+  transition: width 0.4s;
+}
+
+.repair-card:hover {
+  border-color: rgba(201, 168, 76, 0.45);
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.repair-card:hover::before {
+  width: 100%;
+}
+
+.repair-card-icon {
+  width: 52px;
+  height: 52px;
+}
+
+.repair-card-icon svg {
+  width: 52px;
+  height: 52px;
+  stroke: var(--gold);
+}
+
+.repair-card-title {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.35rem;
+  color: var(--white);
+}
+
+.repair-card-desc {
+  font-size: 0.9rem;
+  color: var(--muted);
+  font-weight: 300;
+  line-height: 1.75;
+}
+
+.repair-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  margin-top: 0.5rem;
+}
+
+.repair-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-size: 0.88rem;
+  color: var(--text);
+  font-weight: 400;
+}
+
+.repair-list li svg {
+  width: 16px;
+  height: 16px;
+  stroke: var(--gold);
+  flex-shrink: 0;
+}
+
+
+/* ── CTA SECTIE ── */
+.cta-section {
+  background: var(--darker);
+  padding: 90px 5%;
+  text-align: center;
+  border-top: 1px solid rgba(201, 168, 76, 0.15);
+}
+
+.cta-text {
+  color: var(--muted);
+  font-size: 0.95rem;
+  font-weight: 300;
+  max-width: 500px;
+  margin: 0 auto 2.5rem;
+  line-height: 1.8;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .intro-banner {
+    grid-template-columns: 1fr;
+  }
+  .intro-banner-img {
+    min-height: 260px;
+  }
+  .repair-grid {
+    grid-template-columns: 1fr;
+  }
+  .reviews-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ══ GALERIJ ══ */
+.gallery-section {
+  background: var(--darker);
+  padding: 90px 0 90px 5%;
+  text-align: center;
+  overflow: hidden;
+}
+
+.gallery-section .section-subtitle {
+  margin-bottom: 2.5rem;
+}
+
+/* Scrollbare wrapper */
+.gallery-scroll-wrapper {
+  overflow-x: auto;
+  overflow-y: hidden;
+  cursor: grab;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: var(--gold) var(--card-bg);
+  padding-bottom: 1rem;
+}
+
+.gallery-scroll-wrapper:active {
+  cursor: grabbing;
+}
+
+/* Scrollbar stijl (Webkit) */
+.gallery-scroll-wrapper::-webkit-scrollbar {
+  height: 4px;
+}
+
+.gallery-scroll-wrapper::-webkit-scrollbar-track {
+  background: var(--card-bg);
+}
+
+.gallery-scroll-wrapper::-webkit-scrollbar-thumb {
+  background: var(--gold);
+}
+
+/* De rij met tegels */
+.gallery-scroll-track {
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+  width: max-content;
+  padding-right: 5%;
+}
+
+/* Individuele tegel */
+.gallery-tile {
+  position: relative;
+  width: 320px;
+  height: 400px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.gallery-tile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease, filter 0.5s ease;
+  filter: brightness(0.85) saturate(0.85);
+}
+
+.gallery-tile:hover img {
+  transform: scale(1.05);
+  filter: brightness(0.6) saturate(0.75);
+}
+
+/* Label onderaan elke tegel */
+.gallery-tile-label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem 1.2rem;
+  background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, transparent 100%);
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.gallery-tile:hover .gallery-tile-label {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive: kleinere tegels op mobiel */
+@media (max-width: 768px) {
+  .gallery-tile {
+    width: 240px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-tile {
+    width: 200px;
+    height: 260px;
+  }
+}
