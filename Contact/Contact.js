@@ -1,34 +1,33 @@
-document.addEventListener("DOMContentLoaded", () => {
+"use strict";
 
-    console.log("Contact.js geladen");
+//wait for document load
+window.addEventListener('load', initialize);
+document.getElementById('contactForm').addEventListener('submit', function (e) {
+    e.preventDefault();
 
-    const form = document.getElementById("contactForm");
+    const naam = document.getElementById('naam').value;
+    const email = document.getElementById('email').value;
+    const telefoon = document.getElementById('telefoon').value;
+    const onderwerp = document.getElementById('onderwerp').value;
+    const bericht = document.getElementById('bericht').value;
 
-    if (!form) {
-        console.error("Formulier met id 'contactForm' niet gevonden.");
-        return;
-    }
+    const subject = onderwerp
+        ? `Contactformulier: ${onderwerp}`
+        : 'Contactformulier';
 
-    form.addEventListener("submit", async (e) => {
-        e.preventDefault();
+    const body =
+        `Naam: ${naam}\r\n` +
+        `E-mail: ${email}\r\n` +
+        `Telefoon: ${telefoon || '—'}\r\n` +
+        `Onderwerp: ${onderwerp || '—'}\r\n` +
+        `\r\n` +
+        `Bericht:\r\n${bericht}`;
 
-        const formData = new FormData(form);
+    const mailtoLink =
+        `mailto:info@schoenmakerijrene.be` +
+        `?cc=vanparyscharlotte@hotmail.com` +
+        `?subject=${encodeURIComponent(subject)}` +
+        `&body=${encodeURIComponent(body)}`;
 
-        try {
-            const response = await fetch("send-mail.php", {
-                method: "POST",
-                body: formData
-            });
-
-            const result = await response.text();
-
-            alert(result);
-            form.reset();
-
-        } catch (error) {
-            console.error(error);
-            alert("Er is iets misgegaan.");
-        }
-    });
-
+    window.location.href = mailtoLink;
 });

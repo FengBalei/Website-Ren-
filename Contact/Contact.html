@@ -5,10 +5,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact — Schoenmakerij René</title>
-<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;300;400;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;300;400;600;700&display=swap"
+        rel="stylesheet" />
     <link rel="stylesheet" href="../CSS/style.css" />
     <link rel="stylesheet" href="Contact.css" />
-    <script src="Contact.js"></script>
 </head>
 
 <body>
@@ -136,31 +136,31 @@
 
             <!-- Rechterkolom: formulier -->
             <div class="contact-form-col">
-                 <script src="Contact.js"></script>
+                <script src="Contact.js"></script>
                 <p class="section-label">Stuur ons een bericht</p>
                 <h2 class="section-title" style="font-size:1.8rem; margin-bottom:2rem;">Contactformulier</h2>
 
-                <form class="contact-form" id="contactForm"  action="send-mail.php" method="POST">
-git add 
+                <form class="contact-form" id="contactForm" action="mailto:jouw@email.be" method="POST"
+                    enctype="text/plain">
                     <div class="form-group">
                         <label for="naam">Naam</label>
-                        <input type="text" id="naam" name="naam" placeholder="Uw naam" required />
+                        <input type="text" id="naam" name="Naam" placeholder="Uw naam" required />
                     </div>
 
                     <div class="form-group">
                         <label for="email">E-mailadres</label>
-                        <input type="email" id="email" name="email" placeholder="uw@email.be" required />
+                        <input type="email" id="email" name="E-mail" placeholder="uw@email.be" required />
                     </div>
 
                     <div class="form-group">
                         <label for="telefoon">Telefoon <span
                                 style="color:var(--muted); font-weight:300;">(optioneel)</span></label>
-                        <input type="tel" id="telefoon" name="telefoon" placeholder="0470 00 00 00" />
+                        <input type="tel" id="telefoon" name="Telefoon" placeholder="0470 00 00 00" />
                     </div>
 
                     <div class="form-group">
                         <label for="onderwerp">Onderwerp</label>
-                        <select id="onderwerp" name="onderwerp">
+                        <select id="onderwerp" name="Onderwerp">
                             <option value="">— Kies een onderwerp —</option>
                             <option value="herstellingen">Herstellingen</option>
                             <option value="onderhoudsproducten">Onderhoudsproducten</option>
@@ -172,11 +172,10 @@ git add
 
                     <div class="form-group">
                         <label for="bericht">Bericht</label>
-                        <textarea id="bericht" name="bericht" rows="6" placeholder="Uw bericht..." required></textarea>
+                        <textarea id="bericht" name="Bericht" rows="6" placeholder="Uw bericht..." required></textarea>
                     </div>
 
                     <button type="submit" class="btn-gold btn-submit">Verstuur bericht</button>
-
                 </form>
             </div>
 
