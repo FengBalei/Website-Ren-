@@ -521,3 +521,39 @@ footer {
   margin: 0 auto 2.5rem;
   line-height: 1.8;
 }
+
+/* ── ONZE WINKELS ── */
+#winkels {
+    padding-top: 90px;
+    padding-bottom: 90px;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.location-grid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .location-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.tile {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.section-header-centered {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3rem;
+}
