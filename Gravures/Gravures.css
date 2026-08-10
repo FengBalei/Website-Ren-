@@ -1,4 +1,3 @@
-/* ── ACTIVE NAV LINK ── */
 .nav-links a.active {
   color: var(--gold);
 }
